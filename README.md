@@ -1,26 +1,18 @@
-<h1 align="center">🌾 Pronóstico del IPAP a 12 meses</h1>
+Vista previa de cómo se verá el README en GitHub
 
-<p align="center"><b>Índice de Precios al Productor Agropecuario de Colombia</b></p>
+# 🌾 Pronóstico del IPAP a 12 meses
 
-<p align="center">
-  <img src="https://img.shields.io/badge/R-%E2%89%A5%204.2-276DC3?logo=r&logoColor=white" alt="R 4.2 o superior">
-  <img src="https://img.shields.io/badge/modelo-bottom__up32__ets-C0392B" alt="Modelo bottom_up32_ets">
-  <img src="https://img.shields.io/badge/MAPE%20test-1.16%25-2E7D32" alt="MAPE en test 1.16 por ciento">
-  <img src="https://img.shields.io/badge/validaci%C3%B3n-rolling%20origin-2E6DA4" alt="Validación rolling origin">
-  <img src="https://img.shields.io/badge/licencia-MIT-lightgrey" alt="Licencia MIT">
-</p>
+**Índice de Precios al Productor Agropecuario de Colombia**
 
-<p align="center">Torneo rolling origin de 15 candidatos · Modelo elegido: bottom-up de 32 subclases con ETS · Prueba final de 12 meses</p>
+R ≥ 4.2modelo bottom_up32_etsMAPE test 1.16 %validación rolling originlicencia MIT
 
-<p align="center">
-  <img src="resultados/pronostico_futuro.png" alt="Pronóstico del IPAP de oct 2026 a sep 2027 con intervalos calibrados" width="720"><br>
-  <em>Pronóstico a 12 meses (oct 2026 – sep 2027) con intervalos calibrados al 80 % y 95 %.</em>
-</p>
+Torneo rolling origin de 15 candidatos · Modelo elegido: bottom-up de 32 subclases con ETS · Prueba final de 12 meses
 
-<p align="center">
-  <img src="resultados/prueba_historica.png" alt="Prueba final: IPAP real vs predicho de oct 2025 a sep 2026" width="720"><br>
-  <em>Ejercicio de testeo: IPAP real vs predicho (oct 2025 – sep 2026). MAPE del modelo elegido: 1.16 %.</em>
-</p>
+Pronóstico del IPAP de oct 2026 a sep 2027 con intervalos calibrados\
+*Pronóstico a 12 meses (oct 2026 – sep 2027) con intervalos calibrados al 80 % y 95 %.*
+
+Prueba final: IPAP real vs predicho de oct 2025 a sep 2026\
+*Ejercicio de testeo: IPAP real vs predicho (oct 2025 – sep 2026). MAPE del modelo elegido: 1.16 %.*
 
 ---
 
@@ -39,12 +31,12 @@
 
 ## 🏆 Resultados en una mirada
 
-| | |
-|---|---|
+|  |  |
+| --- | --- |
 | **Modelo elegido** | `bottom_up32_ets`: ETS (en logaritmos) para cada una de las 32 subclases, agregadas con los pesos publicados de la canasta |
 | **MAPE en la prueba final (12 meses)** | **1.16 %** (oct 2025 – sep 2026) |
 | **MAPE del Naive en el mismo test** | 3.76 % (el error del modelo elegido equivale al 31 % del error del Naive) |
-| **MAE relativo vs Naive en validación** | **0.866** (< 1 = mejor que el Naive) |
+| **MAE relativo vs Naive en validación** | **0.866** (\< 1 = mejor que el Naive) |
 | **MAPE mediano en validación rolling origin** | **5.60 %** a 12 meses, el más bajo de 15 candidatos |
 | **Pronóstico sep 2027** | **264.73** vs 254.74 observado en sep 2026 → **+3.92 %** acumulado en 12 meses |
 
@@ -55,7 +47,7 @@
 Pronóstico puntual del IPAP del modelo `bottom_up32_ets`, estimado con toda la serie hasta **sep 2026** (último dato observado: **254.74**).
 
 | Mes | Pronóstico | IC 80 % | IC 95 % |
-|---|---:|---:|---:|
+| --- | --- | --- | --- |
 | oct 2026 | **255.60** | 251.7 – 264.1 | 248.5 – 267.5 |
 | nov 2026 | **255.42** | 248.9 – 269.4 | 243.7 – 275.1 |
 | dic 2026 | **255.82** | 247.1 – 274.6 | 240.1 – 282.2 |
@@ -80,7 +72,7 @@ Archivo: [`resultados/pronostico_futuro.csv`](resultados/pronostico_futuro.csv) 
 Los **últimos 12 meses** de la serie (oct 2025 – sep 2026) se reservaron como prueba final. El modelo se reestimó solo con datos hasta **sep 2025** y se pronosticaron esos 12 meses de una sola vez.
 
 | Mes | IPAP real | Predicho | Error abs. | Error % |
-|---|---:|---:|---:|---:|
+| --- | --- | --- | --- | --- |
 | oct 2025 | 243.62 | 241.49 | 2.13 | 0.87 % |
 | nov 2025 | 238.98 | 241.42 | 2.44 | 1.02 % |
 | dic 2025 | 243.25 | 242.02 | 1.24 | 0.51 % |
@@ -93,12 +85,12 @@ Los **últimos 12 meses** de la serie (oct 2025 – sep 2026) se reservaron como
 | jul 2026 | 251.18 | 250.91 | 0.27 | 0.11 % |
 | ago 2026 | 250.43 | 251.60 | 1.18 | 0.47 % |
 | sep 2026 | 254.74 | 253.14 | 1.60 | 0.63 % |
-| **Promedio** | | | **2.91** | **1.16 %** |
+| **Promedio** |  |  | **2.91** | **1.16 %** |
 
 ### Comparación con las referencias en el mismo test
 
 | Método | MAPE | MAE (puntos) | MASE |
-|---|---:|---:|---:|
+| --- | --- | --- | --- |
 | **bottom_up32_ets (modelo elegido)** | 1.16 % | 2.91 | 1.13 |
 | Naive (último dato) | 3.76 % | 9.51 | 3.69 |
 | Naive estacional | 6.73 % | 16.88 | 6.55 |
@@ -116,12 +108,10 @@ Archivos: [`resultados/prueba_historica.csv`](resultados/prueba_historica.csv) �
 
 Se corrió un **torneo rolling origin** con ventana expansiva: primera estimación con 8 años de datos y un nuevo origen cada 3 meses, pronosticando siempre 12 meses. Hubo **24 orígenes** (dic 2018 – sep 2024); 18 son comparables entre todos los candidatos. Ningún origen de validación llega al tramo de test.
 
-<div align="center">
-<img src="resultados/torneo_rolling_origin.png" alt="Torneo rolling origin: MAPE mediano por candidato" width="760">
-</div>
+Torneo rolling origin: MAPE mediano por candidato
 
 | # | Candidato | MAPE mediano (18 orígenes) | MAE relativo vs Naive |
-|---:|---|---:|---:|
+| --- | --- | --- | --- |
 | 1 | **bottom_up32_ets** | 5.60 % | 0.866 |
 | 2 | drift | 6.05 % | 0.964 |
 | 3 | ensemble | 6.70 % | 0.972 |
@@ -140,9 +130,7 @@ Se corrió un **torneo rolling origin** con ventana expansiva: primera estimaci�
 
 Candidatos: Naive, Naive estacional, Drift, Drift en logaritmos, Drift con ventana móvil (48 meses), ETS, ETS amortiguado, ARIMA, SARIMA, TBATS, un ensamble TBATS + Drift con pesos por error histórico, y 4 versiones *bottom-up* (Naive, Drift ventana, ETS y SARIMA aplicados a las 32 subclases).
 
-<div align="center">
-<img src="resultados/validacion_mape_por_horizonte.png" alt="MAPE por horizonte en validación" width="760">
-</div>
+MAPE por horizonte en validación
 
 Archivos: [`resultados/resumen_torneo.csv`](resultados/resumen_torneo.csv) · [`resultados/torneo_rolling_origin.csv`](resultados/torneo_rolling_origin.csv) · [`resultados/validacion_mae_relativo_naive.csv`](resultados/validacion_mae_relativo_naive.csv) · [`resultados/validacion_mape_por_horizonte.csv`](resultados/validacion_mape_por_horizonte.csv)
 
@@ -195,7 +183,7 @@ source("R/modelo_rolling_origin.R")
 ## 🗂️ Archivos de resultados
 
 | Archivo | Contenido |
-|---|---|
+| --- | --- |
 | [`pronostico_futuro.csv`](resultados/pronostico_futuro.csv) | Pronóstico a 12 meses con intervalos calibrados 80 / 95 % |
 | [`prueba_historica.csv`](resultados/prueba_historica.csv) | Ejercicio de testeo: real, predicho, error y MAPE por mes |
 | [`metricas_prueba.csv`](resultados/metricas_prueba.csv) | MAPE, MAE y MASE del modelo elegido y las referencias en el test |
