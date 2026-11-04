@@ -1,0 +1,15 @@
+"modelo_1","modelo_2","diferencia_media_MAPE_pp","proporcion_origenes_gana_modelo_1"
+"bottom_up32_ets","naive",-1.06949357446318,0.722222222222222
+"bottom_up32_ets","snaive",-5.34652889036724,0.777777777777778
+"bottom_up32_ets","drift",-0.7372118784405,0.666666666666667
+"bottom_up32_ets","drift_log",-1.05781296642022,0.666666666666667
+"bottom_up32_ets","drift_ventana",-1.73221262853635,0.833333333333333
+"bottom_up32_ets","ets",-2.43868762563387,0.833333333333333
+"bottom_up32_ets","ets_damped",-1.74715665044118,0.777777777777778
+"bottom_up32_ets","arima",-1.57377877618691,0.722222222222222
+"bottom_up32_ets","sarima",-0.864872828994578,0.5
+"bottom_up32_ets","tbats",-1.74342053592521,0.666666666666667
+"bottom_up32_ets","ensemble",-0.797966526956937,0.555555555555556
+"bottom_up32_ets","bottom_up32_naive",-1.06949361556517,0.722222222222222
+"bottom_up32_ets","bottom_up32_drift_ventana",-1.73221261719029,0.833333333333333
+"bottom_up32_ets","bottom_up32_sarima",-1.3834130447178,0.666666666666667
